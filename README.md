@@ -140,34 +140,6 @@ curl -X POST http://localhost:3000/api/todos \
   }'
 ```
 
-## 🐳 Docker Deployment
-
-### Build Production Image
-
-```bash
-# Build the Docker image
-docker build -t todo-api .
-
-# Run the container
-docker run -d \
-  --name todo-api \
-  -p 3000:3000 \
-  -e MONGODB_URI=mongodb://your-mongodb-host:27017/todo-app \
-  -e JWT_SECRET=your-production-secret \
-  todo-api
-```
-
-### For EC2 Deployment
-
-```bash
-# Build and tag for ECR (replace with your registry)
-docker build -t your-registry/todo-api:latest .
-docker push your-registry/todo-api:latest
-
-# Or use the docker-compose.prod.yml for production
-docker-compose -f docker-compose.prod.yml up -d
-```
-
 ## 📁 Project Structure
 
 ```
