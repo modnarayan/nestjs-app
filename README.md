@@ -191,16 +191,6 @@ curl -X GET http://localhost:3000/api/todos/stats \
   -H "Authorization: Bearer YOUR_JWT_TOKEN"
 ```
 
-## 🚀 CI/CD Integration
-
-The health check endpoints make it easy to integrate with CI/CD pipelines:
-
-```yaml
-# Example GitHub Actions health check
-- name: Health Check
-  run: |
-    curl -f http://your-app-url/api/health/ping || exit 1
-```
 
 ## 📝 Environment Variables
 
